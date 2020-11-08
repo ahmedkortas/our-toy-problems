@@ -7,8 +7,16 @@ pyramid(2) => [ [1], [1, 1] ]
 pyramid(3) => [ [1], [1, 1], [1, 1, 1] ]
 */
 
-var pyramid =(number){
-    //TO DO:
+var pyramid = function (number) {
+	let pyramidArray = Array.from(Array(number + 1), (_, index) =>
+		Array.from(Array(index), (_, subIndex) => subIndex)
+	);
+	return pyramidArray;
+};
 
-    //good luck <3
-}
+var pyramidWith1 = function (number) {
+	let pyramidArray = Array.from(Array(number + 1), (_, index) =>
+		Array.from(Array(index), () => 1)
+	);
+	return pyramidArray;
+};
